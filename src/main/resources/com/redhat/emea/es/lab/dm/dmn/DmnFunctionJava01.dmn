@@ -1,0 +1,103 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<dmn:definitions xmlns:dmn="http://www.omg.org/spec/DMN/20180521/MODEL/" xmlns="http://www.trisotech.com/definitions/_9d01a0c4-f529-4ad8-ad8e-ec5fb5d96ad4" xmlns:semantic="https://www.omg.org/spec/DMN/20191111/MODEL/" xmlns:di="http://www.omg.org/spec/DMN/20180521/DI/" xmlns:include1="http://www.trisotech.com/definitions/_5e8e877a-af87-434b-9c36-ed51c8d6b514" xmlns:feel="http://www.omg.org/spec/DMN/20180521/FEEL/" xmlns:drools="http://www.drools.org/kie/dmn/1.2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:tc="http://www.omg.org/spec/DMN/20160719/testcase" xmlns:rss="http://purl.org/rss/2.0/" xmlns:trisofeed="http://trisotech.com/feed" xmlns:trisodmn="http://www.trisotech.com/2016/triso/dmn" xmlns:dmndi="http://www.omg.org/spec/DMN/20180521/DMNDI/" xmlns:triso="http://www.trisotech.com/2015/triso/modeling" xmlns:dc="http://www.omg.org/spec/DMN/20180521/DC/" id="_9d01a0c4-f529-4ad8-ad8e-ec5fb5d96ad4" name="DMN13-132" expressionLanguage="http://www.omg.org/spec/DMN/20180521/FEEL/" typeLanguage="http://www.omg.org/spec/DMN/20180521/FEEL/" namespace="http://www.trisotech.com/definitions/_9d01a0c4-f529-4ad8-ad8e-ec5fb5d96ad4">
+  <dmn:extensionElements/>
+  <dmn:businessKnowledgeModel id="_DC35E15F-CDC3-43BB-8469-CF9873134DFA" name="Sqrt using Math3">
+    <dmn:extensionElements/>
+    <dmn:variable id="_44F2AABF-C884-4F35-9144-568C425B2CBB" name="Sqrt using Math3" typeRef="number"/>
+    <dmn:encapsulatedLogic id="_A7B9A9A2-4290-4BC7-94D5-F5AA1EE8962D" kind="Java">
+      <dmn:formalParameter id="_03B714D1-5855-4109-8928-6917B5B49824" name="p-1" typeRef="number"/>
+      <dmn:context id="_E1D81D44-57E7-4089-9AE7-BD0F0B335972">
+        <dmn:contextEntry>
+          <dmn:variable id="_600FCD54-388A-4B0E-8973-A11B603A42CF" name="class" typeRef="string"/>
+          <dmn:literalExpression id="_FBCC00AC-55E1-4D26-A517-C393C1096C29">
+            <dmn:text>"com.space_pmml.prj_pmml_test_02.MathUtils"</dmn:text>
+          </dmn:literalExpression>
+        </dmn:contextEntry>
+        <dmn:contextEntry>
+          <dmn:variable id="_E7C80102-2A4D-4847-A420-1A18D094E502" name="method signature" typeRef="string"/>
+          <dmn:literalExpression id="_91CD82DD-8A18-4CFC-964F-AD3CABD3F973">
+            <dmn:text>"sqrt(double)"</dmn:text>
+          </dmn:literalExpression>
+        </dmn:contextEntry>
+      </dmn:context>
+    </dmn:encapsulatedLogic>
+  </dmn:businessKnowledgeModel>
+  <dmn:inputData id="_0F179B7B-3947-4B7D-854B-BFABE422877A" name="Info">
+    <dmn:extensionElements/>
+    <dmn:variable id="_750A9532-4B2F-4B42-A88B-0352ECCAC39D" name="Info" typeRef="number"/>
+  </dmn:inputData>
+  <dmn:decision id="_decision_003" name="Using Java Function">
+    <dmn:extensionElements/>
+    <dmn:variable id="_29C88EE6-FFFD-4825-90B9-83320B1BDAA6" name="Using Java Function" typeRef="number"/>
+    <dmn:informationRequirement id="_F882CD0F-8DC4-4EA6-91F1-4879872248C6">
+      <dmn:requiredInput href="#_0F179B7B-3947-4B7D-854B-BFABE422877A"/>
+    </dmn:informationRequirement>
+    <dmn:knowledgeRequirement id="_5DE9D86E-4954-457F-8727-A7DCD4BF2C56">
+      <dmn:requiredKnowledge href="#_DC35E15F-CDC3-43BB-8469-CF9873134DFA"/>
+    </dmn:knowledgeRequirement>
+    <dmn:literalExpression id="_7037A2C3-2996-424B-A073-FB9324E8B1B6">
+      <dmn:text>Sqrt using Math3(Info)</dmn:text>
+    </dmn:literalExpression>
+  </dmn:decision>
+  <dmndi:DMNDI>
+    <dmndi:DMNDiagram>
+      <di:extension>
+        <drools:ComponentsWidthsExtension>
+          <drools:ComponentWidths dmnElementRef="_E1D81D44-57E7-4089-9AE7-BD0F0B335972">
+            <drools:width>50.0</drools:width>
+            <drools:width>130.0</drools:width>
+            <drools:width>500.0</drools:width>
+          </drools:ComponentWidths>
+          <drools:ComponentWidths dmnElementRef="_FBCC00AC-55E1-4D26-A517-C393C1096C29">
+            <drools:width>500.0</drools:width>
+          </drools:ComponentWidths>
+          <drools:ComponentWidths dmnElementRef="_91CD82DD-8A18-4CFC-964F-AD3CABD3F973">
+            <drools:width>500.0</drools:width>
+          </drools:ComponentWidths>
+          <drools:ComponentWidths dmnElementRef="_A7B9A9A2-4290-4BC7-94D5-F5AA1EE8962D">
+            <drools:width>50.0</drools:width>
+            <drools:width>700.0</drools:width>
+          </drools:ComponentWidths>
+          <drools:ComponentWidths dmnElementRef="_7037A2C3-2996-424B-A073-FB9324E8B1B6">
+            <drools:width>330.0</drools:width>
+          </drools:ComponentWidths>
+        </drools:ComponentsWidthsExtension>
+      </di:extension>
+      <dmndi:DMNShape id="dmnshape-_DC35E15F-CDC3-43BB-8469-CF9873134DFA" dmnElementRef="_DC35E15F-CDC3-43BB-8469-CF9873134DFA" isCollapsed="false">
+        <dmndi:DMNStyle>
+          <dmndi:FillColor red="255" green="255" blue="255"/>
+          <dmndi:StrokeColor red="0" green="0" blue="0"/>
+          <dmndi:FontColor red="0" green="0" blue="0"/>
+        </dmndi:DMNStyle>
+        <dc:Bounds x="489" y="184" width="100" height="50"/>
+        <dmndi:DMNLabel/>
+      </dmndi:DMNShape>
+      <dmndi:DMNShape id="dmnshape-_0F179B7B-3947-4B7D-854B-BFABE422877A" dmnElementRef="_0F179B7B-3947-4B7D-854B-BFABE422877A" isCollapsed="false">
+        <dmndi:DMNStyle>
+          <dmndi:FillColor red="255" green="255" blue="255"/>
+          <dmndi:StrokeColor red="0" green="0" blue="0"/>
+          <dmndi:FontColor red="0" green="0" blue="0"/>
+        </dmndi:DMNStyle>
+        <dc:Bounds x="278" y="214" width="100" height="50"/>
+        <dmndi:DMNLabel/>
+      </dmndi:DMNShape>
+      <dmndi:DMNShape id="dmnshape-_decision_003" dmnElementRef="_decision_003" isCollapsed="false">
+        <dmndi:DMNStyle>
+          <dmndi:FillColor red="255" green="255" blue="255"/>
+          <dmndi:StrokeColor red="0" green="0" blue="0"/>
+          <dmndi:FontColor red="0" green="0" blue="0"/>
+        </dmndi:DMNStyle>
+        <dc:Bounds x="306" y="82" width="100" height="50"/>
+        <dmndi:DMNLabel/>
+      </dmndi:DMNShape>
+      <dmndi:DMNEdge id="dmnedge-_F882CD0F-8DC4-4EA6-91F1-4879872248C6" dmnElementRef="_F882CD0F-8DC4-4EA6-91F1-4879872248C6">
+        <di:waypoint x="328" y="214"/>
+        <di:waypoint x="356" y="132"/>
+      </dmndi:DMNEdge>
+      <dmndi:DMNEdge id="dmnedge-_5DE9D86E-4954-457F-8727-A7DCD4BF2C56" dmnElementRef="_5DE9D86E-4954-457F-8727-A7DCD4BF2C56">
+        <di:waypoint x="489" y="209"/>
+        <di:waypoint x="406" y="107"/>
+      </dmndi:DMNEdge>
+    </dmndi:DMNDiagram>
+  </dmndi:DMNDI>
+</dmn:definitions>

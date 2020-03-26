@@ -1,0 +1,72 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<dmn:definitions xmlns:dmn="http://www.omg.org/spec/DMN/20180521/MODEL/" xmlns="https://kiegroup.org/dmn/_F47CC423-A4DE-4462-A3E5-20214E11D8A0" xmlns:included1="https://kiegroup.org/dmn/_CEB8AFB3-D510-4239-8714-6A757A625E44" xmlns:di="http://www.omg.org/spec/DMN/20180521/DI/" xmlns:kie="http://www.drools.org/kie/dmn/1.2" xmlns:feel="http://www.omg.org/spec/DMN/20180521/FEEL/" xmlns:dmndi="http://www.omg.org/spec/DMN/20180521/DMNDI/" xmlns:dc="http://www.omg.org/spec/DMN/20180521/DC/" id="_7BA0BD81-A8E7-483E-976D-2BD66F44D7E6" name="DecisionService12" expressionLanguage="http://www.omg.org/spec/DMN/20180521/FEEL/" typeLanguage="http://www.omg.org/spec/DMN/20180521/FEEL/" namespace="https://kiegroup.org/dmn/_F47CC423-A4DE-4462-A3E5-20214E11D8A0">
+  <dmn:extensionElements/>
+  <dmn:import id="_7C5D9356-CBD7-4C48-AF0A-9CD3E3911619" name="DS11" namespace="https://kiegroup.org/dmn/_CEB8AFB3-D510-4239-8714-6A757A625E44" locationURI="DecisionService11.dmn" importType="http://www.omg.org/spec/DMN/20180521/MODEL/"/>
+  <dmn:decision id="_1CE16220-6FD5-4015-8B5F-486F3531B0F5" name="Decision Stage">
+    <dmn:extensionElements/>
+    <dmn:variable id="_B8BC117D-F73D-40A7-9270-00773AC4F348" name="Decision Stage" typeRef="number"/>
+    <dmn:informationRequirement id="_B7633534-07DE-467C-948B-311ED8CA1089">
+      <dmn:requiredInput href="#_FA0C144D-0679-4624-BF7C-BD30903EB5DD"/>
+    </dmn:informationRequirement>
+    <dmn:knowledgeRequirement id="_81F80511-41B9-4431-ACBC-57B12836281E">
+      <dmn:requiredKnowledge href="https://kiegroup.org/dmn/_CEB8AFB3-D510-4239-8714-6A757A625E44#_F887050F-AC12-4911-99A5-798BF52E6DF2"/>
+    </dmn:knowledgeRequirement>
+    <dmn:literalExpression id="_A9EF09C8-C452-4B30-9448-7D8A6E97ACE7">
+      <dmn:text>DS11.DecisionService(Stage)</dmn:text>
+    </dmn:literalExpression>
+  </dmn:decision>
+  <dmn:inputData id="_FA0C144D-0679-4624-BF7C-BD30903EB5DD" name="Stage">
+    <dmn:extensionElements/>
+    <dmn:variable id="_904BCCEA-3BCA-41D5-A1AE-0DE326C5C77B" name="Stage" typeRef="DS11.Points"/>
+  </dmn:inputData>
+  <dmndi:DMNDI>
+    <dmndi:DMNDiagram>
+      <di:extension>
+        <kie:ComponentsWidthsExtension>
+          <kie:ComponentWidths dmnElementRef="_A9EF09C8-C452-4B30-9448-7D8A6E97ACE7">
+            <kie:width>245.0</kie:width>
+          </kie:ComponentWidths>
+        </kie:ComponentsWidthsExtension>
+      </di:extension>
+      <dmndi:DMNShape id="dmnshape-included1:_F887050F-AC12-4911-99A5-798BF52E6DF2" dmnElementRef="included1:_F887050F-AC12-4911-99A5-798BF52E6DF2" isCollapsed="false">
+        <dmndi:DMNStyle>
+          <dmndi:FillColor red="255" green="255" blue="255"/>
+          <dmndi:StrokeColor red="0" green="0" blue="0"/>
+          <dmndi:FontColor red="0" green="0" blue="0"/>
+        </dmndi:DMNStyle>
+        <dc:Bounds x="87" y="214" width="200" height="200"/>
+        <dmndi:DMNLabel/>
+        <dmndi:DMNDecisionServiceDividerLine>
+          <di:waypoint x="87" y="314"/>
+          <di:waypoint x="287" y="314"/>
+        </dmndi:DMNDecisionServiceDividerLine>
+      </dmndi:DMNShape>
+      <dmndi:DMNShape id="dmnshape-_1CE16220-6FD5-4015-8B5F-486F3531B0F5" dmnElementRef="_1CE16220-6FD5-4015-8B5F-486F3531B0F5" isCollapsed="false">
+        <dmndi:DMNStyle>
+          <dmndi:FillColor red="255" green="255" blue="255"/>
+          <dmndi:StrokeColor red="0" green="0" blue="0"/>
+          <dmndi:FontColor red="0" green="0" blue="0"/>
+        </dmndi:DMNStyle>
+        <dc:Bounds x="137" y="50" width="100" height="50"/>
+        <dmndi:DMNLabel/>
+      </dmndi:DMNShape>
+      <dmndi:DMNShape id="dmnshape-_FA0C144D-0679-4624-BF7C-BD30903EB5DD" dmnElementRef="_FA0C144D-0679-4624-BF7C-BD30903EB5DD" isCollapsed="false">
+        <dmndi:DMNStyle>
+          <dmndi:FillColor red="255" green="255" blue="255"/>
+          <dmndi:StrokeColor red="0" green="0" blue="0"/>
+          <dmndi:FontColor red="0" green="0" blue="0"/>
+        </dmndi:DMNStyle>
+        <dc:Bounds x="325" y="225" width="100" height="50"/>
+        <dmndi:DMNLabel/>
+      </dmndi:DMNShape>
+      <dmndi:DMNEdge id="dmnedge-_81F80511-41B9-4431-ACBC-57B12836281E" dmnElementRef="_81F80511-41B9-4431-ACBC-57B12836281E">
+        <di:waypoint x="187" y="214"/>
+        <di:waypoint x="187" y="100"/>
+      </dmndi:DMNEdge>
+      <dmndi:DMNEdge id="dmnedge-_B7633534-07DE-467C-948B-311ED8CA1089" dmnElementRef="_B7633534-07DE-467C-948B-311ED8CA1089">
+        <di:waypoint x="375" y="225"/>
+        <di:waypoint x="187" y="100"/>
+      </dmndi:DMNEdge>
+    </dmndi:DMNDiagram>
+  </dmndi:DMNDI>
+</dmn:definitions>
